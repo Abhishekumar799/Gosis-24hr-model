@@ -62,7 +62,7 @@ def main():
     else:
         height = np.nan
 
-if st.checkbox("Do you have patient hospital length of stay in hours?", False):
+    if st.checkbox("Do you have patient hospital length of stay in hours?", False):
         hospital_los_hours = st.number_input('Hospital LOS Hours:', 
                                             min_value=24*(data.describe()["hospital_los_days"].loc["min"]), 
                                             max_value=24*(data.describe()["hospital_los_days"].loc["max"]), 
