@@ -62,22 +62,23 @@ def main():
     else:
         height = np.nan
 
-    if st.checkbox("Do you have patient hospital_los_days?", False):
-        hospital_los_days = st.number_input('Hospital LOS Days:', 
-                                            min_value=data.describe()["hospital_los_days"].loc["min"], 
-                                            max_value=data.describe()["hospital_los_days"].loc["max"], 
-                                            value=data.describe()["hospital_los_days"].loc["50%"])
+if st.checkbox("Do you have patient hospital length of stay in hours?", False):
+        hospital_los_hours = st.number_input('Hospital LOS Hours:', 
+                                            min_value=24*(data.describe()["hospital_los_days"].loc["min"]), 
+                                            max_value=24*(data.describe()["hospital_los_days"].loc["max"]), 
+                                            value=24*(data.describe()["hospital_los_days"].loc["50%"]))
     else:
-        hospital_los_days = np.nan
+        hospital_los_hours = np.nan
 
 
-    if st.checkbox("Do you have patient icu_los_days?", False):
-        icu_los_days = st.number_input('ICU LOS Days:', 
-                                    min_value=data.describe()["icu_los_days"].loc["min"], 
-                                    max_value=data.describe()["icu_los_days"].loc["max"], 
-                                    value=data.describe()["icu_los_days"].loc["50%"])
+    if st.checkbox("Do you have patient icu length of stay in hours?", False):
+        icu_los_hours = st.number_input('ICU LOS Hours:', 
+                                    min_value= 24*(data.describe()["icu_los_days"].loc["min"]), 
+                                    max_value=24*(data.describe()["icu_los_days"].loc["max"]), 
+                                    value=24*(data.describe()["icu_los_days"].loc["50%"]))
     else:
-        icu_los_days = np.nan
+        icu_los_hours = np.nan
+
 
     if st.checkbox("Do you have patient weight?", False):
         weight = st.number_input('Weight:', 
@@ -312,8 +313,8 @@ def main():
     input_dict = {
     'age': age,
     'height': height,
-    'hospital_los_days': hospital_los_days,
-    'icu_los_days': icu_los_days,
+    'hospital_los_days': (hospital_los_hours)/24,
+    'icu_los_days': (icu_los_hours)/24,
     'weight': weight,
     'bun_apache': bun_apache,
     'creatinine_apache': creatinine_apache,
