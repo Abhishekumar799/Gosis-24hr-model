@@ -46,7 +46,7 @@ def main():
 
    
 
-    if st.checkbox("Do you have patient age?", False):
+    if st.checkbox("Do you have patient age in Years?", False):
         age = st.number_input('Age:', 
                           min_value=data.describe()["age"].loc["min"], 
                           max_value=data.describe()["age"].loc["max"], 
@@ -54,7 +54,7 @@ def main():
     else:
         age = np.nan
 
-    if st.checkbox("Do you have patient height?", False):
+    if st.checkbox("Do you have patient height in cm?", False):
         height = st.number_input('Height:', 
                                 min_value=data.describe()["height"].loc["min"], 
                                 max_value=data.describe()["height"].loc["max"], 
@@ -79,8 +79,7 @@ def main():
     else:
         icu_los_hours = np.nan
 
-
-    if st.checkbox("Do you have patient weight?", False):
+    if st.checkbox("Do you have patient weight in KG?", False):
         weight = st.number_input('Weight:', 
                                 min_value=data.describe()["weight"].loc["min"], 
                                 max_value=data.describe()["weight"].loc["max"], 
@@ -88,7 +87,7 @@ def main():
     else:
         weight = np.nan
 
-    if st.checkbox("Do you have patient bun_apache?", False):
+    if st.checkbox("Do you have patient bun_apache (mg/dl) ?", False):
         bun_apache = st.number_input('BUN APACHE:', 
                                     min_value=data.describe()["bun_apache"].loc["min"], 
                                     max_value=data.describe()["bun_apache"].loc["max"], 
@@ -96,7 +95,7 @@ def main():
     else:
         bun_apache = np.nan
 
-    if st.checkbox("Do you have patient creatinine_apache?", False):
+    if st.checkbox("Do you have patient creatinine_apache (mg/dl)?", False):
         creatinine_apache = st.number_input('Creatinine APACHE:', 
                                             min_value=data.describe()["creatinine_apache"].loc["min"], 
                                             max_value=data.describe()["creatinine_apache"].loc["max"], 
@@ -104,7 +103,7 @@ def main():
     else:
         creatinine_apache = np.nan
 
-    if st.checkbox("Do you have patient gcs_eyes_apache?", False):
+    if st.checkbox("Do you have patient gcs_eyes_apache ( ranges from 1-4)?", False):
         gcs_eyes_apache = st.number_input('GCS Eyes APACHE:', 
                                         min_value=data.describe()["gcs_eyes_apache"].loc["min"], 
                                         max_value=data.describe()["gcs_eyes_apache"].loc["max"], 
@@ -112,7 +111,7 @@ def main():
     else:
         gcs_eyes_apache = np.nan
 
-    if st.checkbox("Do you have patient glucose_apache?", False):
+    if st.checkbox("Do you have patient glucose_apache (mg/dl)?", False):
         glucose_apache = st.number_input('Glucose APACHE:', 
                                         min_value=data.describe()["glucose_apache"].loc["min"], 
                                         max_value=data.describe()["glucose_apache"].loc["max"], 
@@ -120,7 +119,7 @@ def main():
     else:
         glucose_apache = np.nan
 
-    if st.checkbox("Do you have patient heart_rate_apache?", False):
+    if st.checkbox("Do you have patient heart_rate_apache(per minute)?", False):
         heart_rate_apache = st.number_input('Heart Rate APACHE:', 
                                             min_value=data.describe()["heart_rate_apache"].loc["min"], 
                                             max_value=data.describe()["heart_rate_apache"].loc["max"], 
@@ -128,7 +127,7 @@ def main():
     else:
         heart_rate_apache = np.nan
 
-    if st.checkbox("Do you have patient hematocrit_apache?", False):
+    if st.checkbox("Do you have patient hematocrit_apache in percent?", False):
         hematocrit_apache = st.number_input('Hematocrit APACHE:', 
                                             min_value=data.describe()["hematocrit_apache"].loc["min"], 
                                             max_value=data.describe()["hematocrit_apache"].loc["max"], 
@@ -136,7 +135,7 @@ def main():
     else:
         hematocrit_apache = np.nan
 
-    if st.checkbox("Do you have patient map_apache?", False):
+    if st.checkbox("Do you have patient map_apache (mm/hg)?", False):
         map_apache = st.number_input('MAP APACHE:', 
                                     min_value=data.describe()["map_apache"].loc["min"], 
                                     max_value=data.describe()["map_apache"].loc["max"], 
@@ -144,7 +143,7 @@ def main():
     else:
         map_apache = np.nan
 
-    if st.checkbox("Do you have patient resprate_apache?", False):
+    if st.checkbox("Do you have patient resprate_apache (per minute)?", False):
         resprate_apache = st.number_input('Respiratory Rate APACHE:', 
                                         min_value=data.describe()["resprate_apache"].loc["min"], 
                                         max_value=data.describe()["resprate_apache"].loc["max"], 
@@ -152,7 +151,7 @@ def main():
     else:
         resprate_apache = np.nan
 
-    if st.checkbox("Do you have patient sodium_apache?", False):
+    if st.checkbox("Do you have patient sodium_apache (mmol/L) ?", False):
         sodium_apache = st.number_input('Sodium APACHE:', 
                                         min_value=data.describe()["sodium_apache"].loc["min"], 
                                         max_value=data.describe()["sodium_apache"].loc["max"], 
@@ -160,7 +159,7 @@ def main():
     else:
         sodium_apache = np.nan
 
-    if st.checkbox("Do you have patient temp_apache?", False):
+    if st.checkbox("Do you have patient temp_apache in degree Celcius?", False):
         temp_apache = st.number_input('Temp APACHE:', 
                                     min_value=data.describe()["temp_apache"].loc["min"], 
                                     max_value=data.describe()["temp_apache"].loc["max"], 
@@ -168,7 +167,7 @@ def main():
     else:
         temp_apache = np.nan
 
-    if st.checkbox("Do you have patient urineoutput_apache?", False):
+    if st.checkbox("Do you have patient urineoutput_apache (ml)?", False):
         urineoutput_apache = st.number_input('Urine Output APACHE:', 
                                             min_value=data.describe()["urineoutput_apache"].loc["min"], 
                                             max_value=data.describe()["urineoutput_apache"].loc["max"], 
@@ -176,7 +175,7 @@ def main():
     else:
         urineoutput_apache = np.nan
 
-    if st.checkbox("Do you have patient ventilated_apache?", False):
+    if st.checkbox("Do you have patient ventilated_apache (Enter 1 for Yes and 0 for No)?", False):
         ventilated_apache = st.number_input('Ventilated APACHE:', 
                                             min_value=data.describe()["ventilated_apache"].loc["min"], 
                                             max_value=data.describe()["ventilated_apache"].loc["max"], 
@@ -184,7 +183,7 @@ def main():
     else:
         ventilated_apache = np.nan
 
-    if st.checkbox("Do you have patient wbc_apache?", False):
+    if st.checkbox("Do you have patient wbc_apache (10^9/L)?", False):
         wbc_apache = st.number_input('WBC APACHE:', 
                                     min_value=data.describe()["wbc_apache"].loc["min"], 
                                     max_value=data.describe()["wbc_apache"].loc["max"], 
@@ -192,7 +191,7 @@ def main():
     else:
         wbc_apache = np.nan
 
-    if st.checkbox("Do you have patient d1_heartrate_max?", False):
+    if st.checkbox("Do you have patient d1_heartrate_max (per minute)?", False):
         d1_heartrate_max = st.number_input('D1 Heartrate Max:', 
                                         min_value=data.describe()["d1_heartrate_max"].loc["min"], 
                                         max_value=data.describe()["d1_heartrate_max"].loc["max"], 
@@ -200,7 +199,7 @@ def main():
     else:
         d1_heartrate_max = np.nan
 
-    if st.checkbox("Do you have patient d1_heartrate_min?", False):
+    if st.checkbox("Do you have patient d1_heartrate_min (per minute)?", False):
         d1_heartrate_min = st.number_input('D1 Heartrate Min:', 
                                         min_value=data.describe()["d1_heartrate_min"].loc["min"], 
                                         max_value=data.describe()["d1_heartrate_min"].loc["max"], 
@@ -208,7 +207,7 @@ def main():
     else:
         d1_heartrate_min = np.nan
 
-    if st.checkbox("Do you have patient d1_spo2_max?", False):
+    if st.checkbox("Do you have patient d1_spo2_max (percent)?", False):
         d1_spo2_max = st.number_input('D1 SpO2 Max:', 
                                     min_value=data.describe()["d1_spo2_max"].loc["min"], 
                                     max_value=data.describe()["d1_spo2_max"].loc["max"], 
@@ -216,7 +215,7 @@ def main():
     else:
         d1_spo2_max = np.nan
 
-    if st.checkbox("Do you have patient d1_spo2_min?", False):
+    if st.checkbox("Do you have patient d1_spo2_min (percent)?", False):
         d1_spo2_min = st.number_input('D1 SpO2 Min:', 
                                     min_value=data.describe()["d1_spo2_min"].loc["min"], 
                                     max_value=data.describe()["d1_spo2_min"].loc["max"], 
@@ -224,7 +223,7 @@ def main():
     else:
         d1_spo2_min = np.nan
 
-    if st.checkbox("Do you have patient d1_sysbp_max?", False):
+    if st.checkbox("Do you have patient d1_sysbp_max (mm/hg)?", False):
         d1_sysbp_max = st.number_input('D1 SysBP Max:', 
                                     min_value=data.describe()["d1_sysbp_max"].loc["min"], 
                                     max_value=data.describe()["d1_sysbp_max"].loc["max"], 
@@ -232,7 +231,7 @@ def main():
     else:
         d1_sysbp_max = np.nan
 
-    if st.checkbox("Do you have patient d1_sysbp_min?", False):
+    if st.checkbox("Do you have patient d1_sysbp_min (mm/hg)?", False):
         d1_sysbp_min = st.number_input('D1 SysBP Min:', 
                                     min_value=data.describe()["d1_sysbp_min"].loc["min"], 
                                     max_value=data.describe()["d1_sysbp_min"].loc["max"], 
@@ -240,7 +239,7 @@ def main():
     else:
         d1_sysbp_min = np.nan
 
-    if st.checkbox("Do you have patient h1_heartrate_max?", False):
+    if st.checkbox("Do you have patient h1_heartrate_max (per min)?", False):
         h1_heartrate_max = st.number_input('H1 Heartrate Max:', 
                                         min_value=data.describe()["h1_heartrate_max"].loc["min"], 
                                         max_value=data.describe()["h1_heartrate_max"].loc["max"], 
@@ -248,7 +247,7 @@ def main():
     else:
         h1_heartrate_max = np.nan
 
-    if st.checkbox("Do you have patient h1_heartrate_min?", False):
+    if st.checkbox("Do you have patient h1_heartrate_min (per min)?", False):
         h1_heartrate_min = st.number_input('H1 Heartrate Min:', 
                                         min_value=data.describe()["h1_heartrate_min"].loc["min"], 
                                         max_value=data.describe()["h1_heartrate_min"].loc["max"], 
@@ -256,7 +255,7 @@ def main():
     else:
         h1_heartrate_min = np.nan
 
-    if st.checkbox("Do you have patient h1_spo2_max?", False):
+    if st.checkbox("Do you have patient h1_spo2_max (percent)?", False):
         h1_spo2_max = st.number_input('H1 SpO2 Max:', 
                                     min_value=data.describe()["h1_spo2_max"].loc["min"], 
                                     max_value=data.describe()["h1_spo2_max"].loc["max"], 
@@ -264,7 +263,7 @@ def main():
     else:
         h1_spo2_max = np.nan
 
-    if st.checkbox("Do you have patient h1_spo2_min?", False):
+    if st.checkbox("Do you have patient h1_spo2_min (percent)?", False):
         h1_spo2_min = st.number_input('H1 SpO2 Min:', 
                                     min_value=data.describe()["h1_spo2_min"].loc["min"], 
                                     max_value=data.describe()["h1_spo2_min"].loc["max"], 
@@ -272,7 +271,7 @@ def main():
     else:
         h1_spo2_min = np.nan
 
-    if st.checkbox("Do you have patient h1_sysbp_max?", False):
+    if st.checkbox("Do you have patient h1_sysbp_max (mm/hg)?", False):
         h1_sysbp_max = st.number_input('H1 SysBP Max:', 
                                     min_value=data.describe()["h1_sysbp_max"].loc["min"], 
                                     max_value=data.describe()["h1_sysbp_max"].loc["max"], 
@@ -280,7 +279,7 @@ def main():
     else:
         h1_sysbp_max = np.nan
 
-    if st.checkbox("Do you have patient h1_sysbp_min?", False):
+    if st.checkbox("Do you have patient h1_sysbp_min (mm/hg)?", False):
         h1_sysbp_min = st.number_input('H1 SysBP Min:', 
                                     min_value=data.describe()["h1_sysbp_min"].loc["min"], 
                                     max_value=data.describe()["h1_sysbp_min"].loc["max"], 
@@ -288,7 +287,7 @@ def main():
     else:
         h1_sysbp_min = np.nan
 
-    if st.checkbox("Do you have patient d1_potassium_max?", False):
+    if st.checkbox("Do you have patient d1_potassium_max (mEq/L)?", False):
         d1_potassium_max = st.number_input('D1 Potassium Max:', 
                                         min_value=data.describe()["d1_potassium_max"].loc["min"], 
                                         max_value=data.describe()["d1_potassium_max"].loc["max"], 
@@ -296,7 +295,7 @@ def main():
     else:
         d1_potassium_max = np.nan
 
-    if st.checkbox("Do you have patient d1_potassium_min?", False):
+    if st.checkbox("Do you have patient d1_potassium_min (mEq/L)?", False):
         d1_potassium_min = st.number_input('D1 Potassium Min:', 
                                         min_value=data.describe()["d1_potassium_min"].loc["min"], 
                                         max_value=data.describe()["d1_potassium_min"].loc["max"], 
@@ -349,15 +348,18 @@ def main():
 
 
 
-    
     input_df = pd.DataFrame([input_dict])
     if st.button("Predict"):
         output, confidence = predict(model=model, input_df=input_df)
-        print(output)
+        # print(output)
+        # print("hospital_los_day",input_dict["hospital_los_days"])
+        # print("hospital_los_hours",hospital_los_hours)
+        # print("icu_los_day",input_dict["icu_los_days"])
+        # print("icu_los_hours",icu_los_hours)
         if output == 1:
             st.warning(f"Patient have high chance of mortality with {confidence*100}%" )
         else:
-            st.success( f"Patient is fine!!!{confidence*100}% ")
+            st.success( f"Patient is fine!!!{confidence*100}%")
 
 
 if __name__ == '__main__':
