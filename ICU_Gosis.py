@@ -357,7 +357,7 @@ def main():
         if output == 1:
             st.warning(f"Patient have high chance of mortality with {confidence*100}%" )
         else:
-            st.success( f"Patient is fine!!!{confidence*100}% and icu hour {icu_los_hours} and icu_los_day {input_dict["icu_los_days"]}")
+            st.success( f"Patient is fine!!!{confidence*100}% and icu hour {icu_los_hours} and icu_los_day {input_dict['icu_los_days']}")
 
 
 if __name__ == '__main__':
